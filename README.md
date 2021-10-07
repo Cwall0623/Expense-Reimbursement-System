@@ -64,8 +64,8 @@ CREATE TABLE reinbursement
 	status ENUM ('Approved','Denied','Standby'),
 	CONSTRAINT reinbursement_pk PRIMARY KEY(case_number)
 	
-);```
-
+);
+```
 ## Usage
 
 - Enter employee credentials when logging in to submit reimbursements.
