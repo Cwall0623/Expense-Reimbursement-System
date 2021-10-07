@@ -42,7 +42,7 @@ git clone https://github.com/Cwall0623/Expense-Reimbursement-System.git
 > Run Javalin
 > Copy/Paste Login.Html in Browser
 
-`DROP TABLE IF EXISTS employee;
+```DROP TABLE IF EXISTS employee;
 DROP TABLE IF EXISTS reinbursement;
 DROP TABLE IF EXISTS reinbursement_employee;
 
@@ -64,8 +64,8 @@ CREATE TABLE reinbursement
 	status ENUM ('Approved','Denied','Standby'),
 	CONSTRAINT reinbursement_pk PRIMARY KEY(case_number)
 	
-);
-`
+);```
+
 ## Usage
 
 - Enter employee credentials when logging in to submit reimbursements.
