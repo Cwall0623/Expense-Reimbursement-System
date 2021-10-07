@@ -15,6 +15,7 @@ The Expense Reimbursement System (ERS) will manage the process of reimbursing em
 * Tech 7 - Java
 * Tech 8 - Javalin
 * Tech 9 - Hibernate
+* Tech 10 - Maven
 
 
 
@@ -35,17 +36,47 @@ git clone https://github.com/Cwall0623/Expense-Reimbursement-System.git
 
 
 > Make AWS account 
-> 
+> Download MariaDB
+> Connect MariaDB to AWS Database
+> Set up tables in MariaDB
+> Run Javalin
+> Copy/Paste Login.Html in Browser
 
-- All the `code` required to get started
-- Images of what it should look like
+`DROP TABLE IF EXISTS employee;
+DROP TABLE IF EXISTS reinbursement;
+DROP TABLE IF EXISTS reinbursement_employee;
 
+CREATE TABLE employee
+(
+	crew_number INT NOT NULL,
+	crew_email VARCHAR(200),
+	password VARCHAR (200),
+	isManager ENUM ('Captain', 'Crew Memeber'),
+	
+	CONSTRAINT employee_pk PRIMARY KEY(crew_number)
+	);
+
+CREATE TABLE reinbursement
+(
+	case_number INT AUTO_INCREMENT,
+	description VARCHAR(200),
+	balance DECIMAL (10,2),
+	status ENUM ('Approved','Denied','Standby'),
+	CONSTRAINT reinbursement_pk PRIMARY KEY(case_number)
+	
+);
+`
 ## Usage
 
-> Here, you instruct other people on how to use your project after they’ve installed it. This would also be a good place to include screenshots of your project in action.
+- Enter employee credentials when logging in to submit reimbursements.
+- Enter in Amount and description.
+- Click submit
+- Logout
+
+- Enter Manager credentials to Approve/Decline reimbursements.
+- Enter case number and Approve/Decline.
+- Click Submit.
 
 
 
-## License
 
-This project uses the following license: [<license_name>](<link>).
