@@ -32,10 +32,10 @@ To-do list:
 ## Getting Started
    
 git clone https://github.com/Cwall0623/Expense-Reimbursement-System.git
-(include all environment setup steps)
 
-> Be sure to include BOTH Windows and Unix command  
-> Be sure to mention if the commands only work on a specific platform (eg. AWS, GCP)
+
+> Make AWS account 
+> 
 
 - All the `code` required to get started
 - Images of what it should look like
